@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<link rel="stylesheet" type="text/css" href="Page1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+</head>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyA5miTN6rAOyx_P8KuiqZMuq6-UyLklqbE"></script>
+
+<script>
+getLocation.call();
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+    var lat1 = 44.439;
+    var long1 = 26.050;
+    var labels = 'P';
+    var latlon = new google.maps.LatLng(lat, lon)
+    var latlon1= new google.maps.LatLng(lat1, long1)
+    var mapholder = document.getElementById('mapholder')
+    mapholder.style.height = '655px';
+    mapholder.style.width = '100%';
+
+    var myOptions = {
+    center:latlon,zoom:14,
+    mapTypeId:google.maps.MapTypeId.ROADMAP,
+    mapTypeControl:false,
+    navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+    }
+    
+    var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
+    var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+    var marker = new google.maps.Marker({position:latlon1,map:map,label: labels,title:"Parking"});
+    
+    google.maps.event.addListener(marker, 'click', function(event) {
+          window.location.href = 'Page3.html';
+        });
+    
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+</script>
+    <div id="mapholder"></div>
+    <div class="account">
+        <a href="Page2.html"><button type="button"  class="account">My Account</button></a>
+        <p></p>
+        <a href="Page6.html"><button type="button"  class="reservation">Active Reservations</button></a>
+     
+</div>
+</body>
+</html>

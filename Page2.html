@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="Page2.css">
+    <body>
+<h1>My Account</h1>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+      <hr>
+        
+        <label for="name"><b>Name</b></label>
+      
+        <p></p>
+      <label for="email"><b>Email</b></label>
+      
+<p></p>
+      <label for="carno"><b>Car number</b></label>
+        
+ <script type="application/javascript">
+        $(document).ready(function(){
+                   $.ajax({
+                        method: "GET",
+                        success:function(data){ 
+                                          console.log(data);
+                            $user.carnumber;
+                                              }
+                              });
+        }                      
+            
+        </script>       
+<p></p>
+      <label for="phone"><b>Phone Number</b></label>
+     
+     <p></p> 
+        
+        <a href="Page1.html"><button>Back</button></a>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script> 
+    
+    </head>

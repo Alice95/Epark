@@ -1,0 +1,57 @@
+body {
+	font-family :Arial;
+}
+#map-layer {
+	width: 90%;
+    float:none;
+}
+.account {
+  float: left;
+  width: 100%;
+  height: 50px;
+  top: 60px;
+
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.reservation{
+    margin-top: 15px;
+    text-decoration-color: white;
+    font: white;
+}
+
+}
+#btnAction {
+	background: #3878c7;
+    padding: 10px 40px;
+    border: #3672bb 1px solid;
+    border-radius: 2px;
+    color: white;
+    font-size: 0.9em;
+    cursor:pointer;
+    display:block;
+}
+#btnAction:disabled {
+    background: white;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+      top: 80px;
+}
+
+button:hover {
+  opacity:1;
+}

@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="Page2.css">
+    <body>
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<h1>Your reservation</h1>
+
+      <hr>
+        
+        <label for="name"><b>Name</b></label>
+    
+        <p></p>
+      <label for="email"><b>Email</b></label>
+        <p></p>
+      <label for="carno"><b>Car number</b></label>
+      
+<p></p>
+      <label for="duration"><b>Duration of your stay</b></label>
+          <p></p>
+        <label>To</label>
+         <p></p>
+      <input type="time" placeholder="To" name="to" required>
+          <p></p>
+          <label>From</label> 
+        <p></p>
+        <input type="time" placeholder="fROM" name="from" required>
+     <p></p>   
+
+      <div class="clearfix">
+        <button type="button" onclick="notify()" class="savebutton">Save</button>
+        </div>
+        
+        <a href="Page3.html"><button onclick="goBack()">Back</button></a>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+    
+    function notify(){
+alert("Reservation has been submitted. Thank you!");
+}
+</script> 
+    
+        
+        
+          
+      </div>
+    </head>

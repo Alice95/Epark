@@ -24,11 +24,12 @@
                         method: "GET",
                         success:function(data){ 
                                           console.log(data);
-                            $user.carnumber;
+                                          var msg = $user.carnumber;
+
+  $('#txt').html(sprintf(msg));
                                               }
                               });
-        }                      
-            
+        }                        
         </script>       
 <p></p>
       <label for="phone"><b>Phone Number</b></label>

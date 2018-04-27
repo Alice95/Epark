@@ -17,20 +17,23 @@
       
 <p></p>
       <label for="carno"><b>Car number</b></label>
-        
+        <div id="txt">   </div>
  <script type="application/javascript">
         $(document).ready(function(){
+            
                    $.ajax({
                         method: "GET",
+                       url:"https://licentapub.mybluemix.net/data",
                         success:function(data){ 
                                           console.log(data);
-                                          var msg = $user.carnumber;
+                                          
 
-  $('#txt').html(sprintf(msg));
+  $('#txt').val(data.carnumber);
                                               }
                               });
         });                        
-        </script>       
+        </script> 
+         
 <p></p>
       <label for="phone"><b>Phone Number</b></label>
      
